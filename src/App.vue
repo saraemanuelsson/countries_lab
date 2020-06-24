@@ -2,9 +2,9 @@
   <div id="app">
     <h1>Countries</h1>
     <div class="main-container">
-      <country-detail :country="selectedCountry"></country-detail>
-      <hr>
       <countries-list :countries="countries" :selectedCountry="selectedCountry"></countries-list>
+      <hr>
+      <country-detail :country="selectedCountry"></country-detail>
     </div>
   </div>
 </template>
