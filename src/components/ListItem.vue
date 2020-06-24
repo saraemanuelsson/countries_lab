@@ -1,13 +1,19 @@
 <template lang="html">
-    <div>
-        
-    </div>
-  
+    <li>{{country.name}}</li>  
 </template>
 
 <script>
-export default {
+import { eventBus } from '../main.js';
 
+
+export default {
+    name: 'list-item',
+    props: ['country'],
+    methods: {
+        handleClick(){
+            eventBus.$emit('country-selected', this.country)
+        }
+    }
 }
 </script>
 
