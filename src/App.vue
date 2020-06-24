@@ -4,7 +4,7 @@
     <div class="main-container">
       <country-detail :country="selectedCountry"></country-detail>
       <hr>
-      <countries-list :countries="countries"></countries-list>
+      <countries-list :countries="countries" :selectedCountry="selectedCountry"></countries-list>
     </div>
   </div>
 </template>
