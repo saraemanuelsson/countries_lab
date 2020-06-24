@@ -2,8 +2,9 @@
   <div id="app">
     <h1>Countries</h1>
     <div class="main-container">
-      <countries-list :countries="countries"></countries-list>
       <country-detail :country="selectedCountry"></country-detail>
+      <hr>
+      <countries-list :countries="countries"></countries-list>
     </div>
   </div>
 </template>
@@ -26,6 +27,10 @@ export default {
     fetch('https://restcountries.eu/rest/v2/all')
     .then(res => res.json())
     .then(countries => this.countries = countries)
+
+    eventBus.$on("country-selected", (country) => {
+      this.selectedCountry = country
+    })
   },
   components: {
     "countries-list": CountriesList,

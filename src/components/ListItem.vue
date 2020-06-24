@@ -1,10 +1,9 @@
 <template lang="html">
-    <li>{{country.name}}</li>  
+    <li v-on:click="handleClick">{{country.name}}</li>  
 </template>
 
 <script>
 import { eventBus } from '../main.js';
-
 
 export default {
     name: 'list-item',

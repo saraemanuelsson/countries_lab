@@ -1,7 +1,7 @@
 <template lang="html">
     <div>
         <ul>
-            <list-item v-for="(country, index) in country" :country="country" :key="index"></list-item>
+            <list-item v-for="(country, index) in countries" :country="country" :key="index"></list-item>
         </ul>
     </div>
   
@@ -20,5 +20,7 @@ export default {
 </script>
 
 <style>
-
+ ul {
+     list-style: none;
+ }
 </style>
