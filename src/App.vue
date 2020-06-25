@@ -2,7 +2,7 @@
   <div id="app">
     <h1>Countries</h1>
     <div class="main-container">
-      <countries-list :countries="countries" :selectedCountry="selectedCountry"></countries-list>
+      <countries-dropdown :countries="countries" :selectedCountry="selectedCountry"></countries-dropdown>
       <hr>
       <country-detail :country="selectedCountry"></country-detail>
     </div>
@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import CountriesList from './components/CountriesList.vue'
+import Dropdown from './components/Dropdown.vue'
 import CountryDetail from './components/CountryDetail.vue'
 import { eventBus } from './main.js'
 
@@ -33,7 +33,7 @@ export default {
     })
   },
   components: {
-    "countries-list": CountriesList,
+    "countries-dropdown": Dropdown,
     "country-detail": CountryDetail
   }
 }
